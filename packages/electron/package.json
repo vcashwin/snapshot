@@ -1,7 +1,7 @@
 {
-  "name": "@ashwinvc/snapshot-electron",
+  "name": "@paper-snapshot/electron",
   "version": "0.1.0",
-  "description": "Electron clipboard adapter for @ashwinvc/snapshot-core",
+  "description": "Electron clipboard adapter for @paper-snapshot/core",
   "type": "module",
   "sideEffects": false,
   "files": ["dist"],
@@ -25,7 +25,7 @@
     "electron": ">=28"
   },
   "dependencies": {
-    "@ashwinvc/snapshot-core": "workspace:*"
+    "@paper-snapshot/core": "workspace:*"
   },
   "devDependencies": {
     "electron": "^35.2.0"

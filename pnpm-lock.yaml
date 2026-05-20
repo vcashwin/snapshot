@@ -17,10 +17,10 @@ importers:
 
   examples/vite-react-demo:
     dependencies:
-      '@ashwinvc/snapshot-core':
+      '@paper-snapshot/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@ashwinvc/snapshot-react':
+      '@paper-snapshot/react':
         specifier: workspace:*
         version: link:../../packages/react
       react:
@@ -50,7 +50,7 @@ importers:
 
   packages/electron:
     dependencies:
-      '@ashwinvc/snapshot-core':
+      '@paper-snapshot/core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -60,7 +60,7 @@ importers:
 
   packages/react:
     dependencies:
-      '@ashwinvc/snapshot-core':
+      '@paper-snapshot/core':
         specifier: workspace:*
         version: link:../core
     devDependencies:

@@ -1,6 +1,6 @@
 import type { WebContents } from "electron";
-import type { CaptureAndCopyOptions } from "@ashwinvc/snapshot-core/capture";
-import type { CaptureResult } from "@ashwinvc/snapshot-core/types";
+import type { CaptureAndCopyOptions } from "@paper-snapshot/core/capture";
+import type { CaptureResult } from "@paper-snapshot/core/types";
 import { writeHtmlToClipboard } from "./clipboard.js";
 
 declare global {
@@ -24,8 +24,8 @@ export type WebContentsCaptureOptions = CaptureAndCopyOptions & {
  *
  * Preload example:
  * ```ts
- * import { captureAndCopy } from '@ashwinvc/snapshot-core/capture';
- * import { wrapForPaper } from '@ashwinvc/snapshot-core/wrap';
+ * import { captureAndCopy } from '@paper-snapshot/core/capture';
+ * import { wrapForPaper } from '@paper-snapshot/core/wrap';
  * contextBridge.exposeInMainWorld('__snapshot', {
  *   captureAndCopy: async (options) => {
  *     const result = await captureAndCopy({ ...options, copyToClipboard: false });

@@ -12,6 +12,6 @@ export default defineConfig({
   clean: true,
   treeshake: true,
   sourcemap: true,
-  external: ["react", "react-dom", "@ashwinvc/snapshot-core"],
+  external: ["react", "react-dom", "@paper-snapshot/core"],
   target: "es2022",
 });

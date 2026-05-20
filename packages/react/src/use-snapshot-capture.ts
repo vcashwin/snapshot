@@ -3,14 +3,14 @@ import {
   captureAndCopy,
   captureSelection,
   type CaptureAndCopyOptions,
-} from "@ashwinvc/snapshot-core/capture";
-import { copyHtmlToClipboard } from "@ashwinvc/snapshot-core/clipboard";
-import { wrapForPaper } from "@ashwinvc/snapshot-core/wrap";
+} from "@paper-snapshot/core/capture";
+import { copyHtmlToClipboard } from "@paper-snapshot/core/clipboard";
+import { wrapForPaper } from "@paper-snapshot/core/wrap";
 import type {
   CaptureResult,
   ClipboardResult,
   SerializeProgress,
-} from "@ashwinvc/snapshot-core/types";
+} from "@paper-snapshot/core/types";
 
 export type SnapshotPhase =
   | "idle"
@@ -37,7 +37,7 @@ export type UseSnapshotCaptureOptions = Omit<
   onComplete?: (result: CaptureResult) => void;
   /** Called when capture is cancelled or aborted. */
   onCancel?: () => void;
-  /** Custom clipboard writer — use @ashwinvc/snapshot-electron in Electron apps. */
+  /** Custom clipboard writer — use @paper-snapshot/electron in Electron apps. */
   writeClipboard?: (html: string) => Promise<ClipboardResult> | ClipboardResult;
 };
 

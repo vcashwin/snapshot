@@ -1,7 +1,7 @@
 {
-  "name": "@ashwinvc/snapshot-react",
+  "name": "@paper-snapshot/react",
   "version": "0.1.0",
-  "description": "React hooks and UI for @ashwinvc/snapshot-core",
+  "description": "React hooks and UI for @paper-snapshot/core",
   "type": "module",
   "sideEffects": false,
   "files": ["dist"],
@@ -30,7 +30,7 @@
     "react-dom": ">=18"
   },
   "dependencies": {
-    "@ashwinvc/snapshot-core": "workspace:*"
+    "@paper-snapshot/core": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^19.1.2",

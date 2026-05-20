@@ -1,5 +1,5 @@
 {
-  "name": "@ashwinvc/snapshot-core",
+  "name": "@paper-snapshot/core",
   "version": "0.1.0",
   "description": "DOM element picker and computed-style HTML serializer for Paper Snapshot",
   "type": "module",

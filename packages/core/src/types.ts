@@ -77,4 +77,4 @@ export type NodeSerializeResult = {
 export type StyleRecord = Record<string, string>;
 
 /** Runtime marker so the types entry is not an empty chunk. Tree-shakeable. */
-export const SNAPSHOT_CORE_TYPES = "@ashwinvc/snapshot-core/types" as const;
+export const SNAPSHOT_CORE_TYPES = "@paper-snapshot/core/types" as const;

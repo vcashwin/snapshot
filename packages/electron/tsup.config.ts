@@ -11,6 +11,6 @@ export default defineConfig({
   clean: true,
   treeshake: true,
   sourcemap: true,
-  external: ["electron", "@ashwinvc/snapshot-core"],
+  external: ["electron", "@paper-snapshot/core"],
   target: "es2022",
 });

@@ -1,5 +1,5 @@
-import { useSnapshotCapture } from "@ashwinvc/snapshot-react/use-snapshot-capture";
-import { SnapshotHud } from "@ashwinvc/snapshot-react/snapshot-ui";
+import { useSnapshotCapture } from "@paper-snapshot/react/use-snapshot-capture";
+import { SnapshotHud } from "@paper-snapshot/react/snapshot-ui";
 
 export function App() {
   const snapshot = useSnapshotCapture({
@@ -35,7 +35,7 @@ export function App() {
   return (
     <div className="page">
       <header className="hero">
-        <h1>@snapshot local demo</h1>
+        <h1>@paper-snapshot local demo</h1>
         <p>
           This Vite app links to the local workspace packages via{" "}
           <code>workspace:*</code>. Capture any element below and paste the
