@@ -37,7 +37,7 @@
     "@paper-snapshot/core": "workspace:*"
   },
   "devDependencies": {
-    "electron": "^35.2.0"
+    "electron": "^39.8.5"
   },
   "keywords": ["snapshot", "electron", "clipboard"],
   "license": "MIT",
