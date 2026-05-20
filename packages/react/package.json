@@ -1,7 +1,16 @@
 {
   "name": "@paper-snapshot/react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React hooks and UI for @paper-snapshot/core",
+  "homepage": "https://github.com/vcashwin/paper-snapshot#readme",
+  "bugs": {
+    "url": "https://github.com/vcashwin/paper-snapshot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vcashwin/paper-snapshot.git",
+    "directory": "packages/react"
+  },
   "type": "module",
   "sideEffects": false,
   "files": ["dist"],

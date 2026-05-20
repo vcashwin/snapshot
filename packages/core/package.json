@@ -1,7 +1,16 @@
 {
   "name": "@paper-snapshot/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DOM element picker and computed-style HTML serializer for Paper Snapshot",
+  "homepage": "https://github.com/vcashwin/paper-snapshot#readme",
+  "bugs": {
+    "url": "https://github.com/vcashwin/paper-snapshot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vcashwin/paper-snapshot.git",
+    "directory": "packages/core"
+  },
   "type": "module",
   "sideEffects": false,
   "files": ["dist"],
