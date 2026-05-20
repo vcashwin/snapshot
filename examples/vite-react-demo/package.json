@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@snapshot/core": "workspace:*",
-    "@snapshot/react": "workspace:*",
+    "@ashwinvc/snapshot-core": "workspace:*",
+    "@ashwinvc/snapshot-react": "workspace:*",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

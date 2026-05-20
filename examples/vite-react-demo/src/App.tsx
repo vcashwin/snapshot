@@ -1,5 +1,5 @@
-import { useSnapshotCapture } from "@snapshot/react/use-snapshot-capture";
-import { SnapshotHud } from "@snapshot/react/snapshot-ui";
+import { useSnapshotCapture } from "@ashwinvc/snapshot-react/use-snapshot-capture";
+import { SnapshotHud } from "@ashwinvc/snapshot-react/snapshot-ui";
 
 export function App() {
   const snapshot = useSnapshotCapture({

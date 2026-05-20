@@ -6,24 +6,24 @@ Tree-shakeable monorepo for capturing live DOM elements as inline-styled HTML �
 
 | Package | Import | Purpose |
 |---------|--------|---------|
-| [`@snapshot/core`](./packages/core) | `@snapshot/core/picker` | Element picker, serializer, clipboard |
-| [`@snapshot/react`](./packages/react) | `@snapshot/react/use-snapshot-capture` | React hook + toast UI |
-| [`@snapshot/electron`](./packages/electron) | `@snapshot/electron/clipboard` | Native Electron clipboard |
+| [`@ashwinvc/snapshot-core`](./packages/core) | `@ashwinvc/snapshot-core/picker` | Element picker, serializer, clipboard |
+| [`@ashwinvc/snapshot-react`](./packages/react) | `@ashwinvc/snapshot-react/use-snapshot-capture` | React hook + toast UI |
+| [`@ashwinvc/snapshot-electron`](./packages/electron) | `@ashwinvc/snapshot-electron/clipboard` | Native Electron clipboard |
 
 Each subpath is a **separate ESM entry** with `"sideEffects": false` — bundlers only include what you import.
 
 ## Install
 
 ```bash
-pnpm add @snapshot/core
-pnpm add @snapshot/react
-pnpm add @snapshot/electron   # optional
+pnpm add @ashwinvc/snapshot-core
+pnpm add @ashwinvc/snapshot-react
+pnpm add @ashwinvc/snapshot-electron   # optional
 ```
 
 ## Quick start (vanilla)
 
 ```ts
-import { captureAndCopy } from "@snapshot/core/capture";
+import { captureAndCopy } from "@ashwinvc/snapshot-core/capture";
 
 const result = await captureAndCopy();
 if (result.status === "success") {
@@ -34,10 +34,10 @@ if (result.status === "success") {
 ## Pick only / serialize only
 
 ```ts
-import { runElementPicker } from "@snapshot/core/picker";
-import { captureBySelector } from "@snapshot/core/serialize";
-import { wrapForPaper } from "@snapshot/core/wrap";
-import { copyHtmlToClipboard } from "@snapshot/core/clipboard";
+import { runElementPicker } from "@ashwinvc/snapshot-core/picker";
+import { captureBySelector } from "@ashwinvc/snapshot-core/serialize";
+import { wrapForPaper } from "@ashwinvc/snapshot-core/wrap";
+import { copyHtmlToClipboard } from "@ashwinvc/snapshot-core/clipboard";
 
 const selector = await runElementPicker();
 if (!selector) return;
@@ -54,8 +54,8 @@ if (captured.status === "success") {
 ## React
 
 ```tsx
-import { useSnapshotCapture } from "@snapshot/react/use-snapshot-capture";
-import { SnapshotHud } from "@snapshot/react/snapshot-ui";
+import { useSnapshotCapture } from "@ashwinvc/snapshot-react/use-snapshot-capture";
+import { SnapshotHud } from "@ashwinvc/snapshot-react/snapshot-ui";
 
 function Toolbar() {
   const snapshot = useSnapshotCapture({ copyToClipboard: true });
@@ -74,8 +74,8 @@ function Toolbar() {
 With context:
 
 ```tsx
-import { SnapshotProvider, useSnapshot } from "@snapshot/react/snapshot-provider";
-import { SnapshotHud } from "@snapshot/react/snapshot-ui";
+import { SnapshotProvider, useSnapshot } from "@ashwinvc/snapshot-react/snapshot-provider";
+import { SnapshotHud } from "@ashwinvc/snapshot-react/snapshot-ui";
 
 function App() {
   return (
@@ -95,30 +95,30 @@ function Hud() {
 ## Electron
 
 ```ts
-import { createElectronClipboardWriter } from "@snapshot/electron/clipboard";
-import { useSnapshotCapture } from "@snapshot/react/use-snapshot-capture";
+import { createElectronClipboardWriter } from "@ashwinvc/snapshot-electron/clipboard";
+import { useSnapshotCapture } from "@ashwinvc/snapshot-react/use-snapshot-capture";
 
 const snapshot = useSnapshotCapture({
   writeClipboard: createElectronClipboardWriter(),
 });
 ```
 
-For `<webview>` guest pages, expose `@snapshot/core` in a preload script and call `@snapshot/electron/inject` — see [packages/electron/src/inject.ts](./packages/electron/src/inject.ts).
+For `<webview>` guest pages, expose `@ashwinvc/snapshot-core` in a preload script and call `@ashwinvc/snapshot-electron/inject` — see [packages/electron/src/inject.ts](./packages/electron/src/inject.ts).
 
 ## Tree-shaking
 
 ```ts
 // ✅ ~picker only
-import { runElementPicker } from "@snapshot/core/picker";
+import { runElementPicker } from "@ashwinvc/snapshot-core/picker";
 
 // ✅ ~serialize only — no picker, no clipboard
-import { captureBySelector } from "@snapshot/core/serialize";
+import { captureBySelector } from "@ashwinvc/snapshot-core/serialize";
 
 // ✅ clipboard fallback only
-import { copyHtmlViaCopyEvent } from "@snapshot/core/clipboard/copy-via-event";
+import { copyHtmlViaCopyEvent } from "@ashwinvc/snapshot-core/clipboard/copy-via-event";
 
 // ❌ avoid — no root barrel export exists by design
-// import { everything } from "@snapshot/core";
+// import { everything } from "@ashwinvc/snapshot-core";
 ```
 
 ## Development
@@ -127,21 +127,18 @@ import { copyHtmlViaCopyEvent } from "@snapshot/core/clipboard/copy-via-event";
 pnpm install
 pnpm build
 pnpm typecheck
+pnpm dev:demo
 ```
 
 ## Publish to npm
 
-One-time: create the [`@snapshot` npm org](https://www.npmjs.com/org/create) and ensure 2FA is configured.
+Published under the **`@ashwinvc` scope** (your npm account). The `@snapshot` org name is already taken on npm.
 
 ```bash
 pnpm publish:packages --otp=123456   # code from your authenticator app
 ```
 
-This publishes `@snapshot/core`, `@snapshot/react`, and `@snapshot/electron@0.1.0` to the public npm registry. Install from any client:
-
-```bash
-pnpm add @snapshot/core @snapshot/react
-```
+This publishes `@ashwinvc/snapshot-core`, `@ashwinvc/snapshot-react`, and `@ashwinvc/snapshot-electron@0.1.0`.
 
 ## License
 

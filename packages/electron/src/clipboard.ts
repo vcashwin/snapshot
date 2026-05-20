@@ -1,5 +1,5 @@
 import { clipboard } from "electron";
-import type { ClipboardResult } from "@snapshot/core/types";
+import type { ClipboardResult } from "@ashwinvc/snapshot-core/types";
 
 export type ElectronClipboardOptions = {
   /** Plain-text fallback stored alongside HTML. */
