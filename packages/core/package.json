@@ -1,0 +1,60 @@
+{
+  "name": "@snapshot/core",
+  "version": "0.1.0",
+  "description": "DOM element picker and computed-style HTML serializer for Paper Snapshot",
+  "type": "module",
+  "sideEffects": false,
+  "files": ["dist"],
+  "exports": {
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/types.js"
+    },
+    "./constants": {
+      "types": "./dist/constants.d.ts",
+      "import": "./dist/constants.js"
+    },
+    "./escape": {
+      "types": "./dist/escape.d.ts",
+      "import": "./dist/escape.js"
+    },
+    "./selector": {
+      "types": "./dist/selector.d.ts",
+      "import": "./dist/selector.js"
+    },
+    "./wrap": {
+      "types": "./dist/wrap.d.ts",
+      "import": "./dist/wrap.js"
+    },
+    "./picker": {
+      "types": "./dist/picker.d.ts",
+      "import": "./dist/picker.js"
+    },
+    "./serialize": {
+      "types": "./dist/serialize.d.ts",
+      "import": "./dist/serialize.js"
+    },
+    "./capture": {
+      "types": "./dist/capture.d.ts",
+      "import": "./dist/capture.js"
+    },
+    "./clipboard": {
+      "types": "./dist/clipboard/browser.d.ts",
+      "import": "./dist/clipboard/browser.js"
+    },
+    "./clipboard/copy-via-event": {
+      "types": "./dist/clipboard/copy-via-event.d.ts",
+      "import": "./dist/clipboard/copy-via-event.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": ["snapshot", "dom", "serializer", "clipboard", "paper"],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

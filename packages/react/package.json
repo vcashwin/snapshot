@@ -1,0 +1,45 @@
+{
+  "name": "@snapshot/react",
+  "version": "0.1.0",
+  "description": "React hooks and UI for @snapshot/core",
+  "type": "module",
+  "sideEffects": false,
+  "files": ["dist"],
+  "exports": {
+    "./use-snapshot-capture": {
+      "types": "./dist/use-snapshot-capture.d.ts",
+      "import": "./dist/use-snapshot-capture.js"
+    },
+    "./snapshot-provider": {
+      "types": "./dist/snapshot-provider.d.ts",
+      "import": "./dist/snapshot-provider.js"
+    },
+    "./snapshot-ui": {
+      "types": "./dist/snapshot-ui.d.ts",
+      "import": "./dist/snapshot-ui.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "@snapshot/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "keywords": ["snapshot", "react", "dom", "picker"],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
