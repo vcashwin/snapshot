@@ -129,9 +129,19 @@ pnpm build
 pnpm typecheck
 ```
 
-## Publish
+## Publish to npm
 
-Each package under `packages/*` is independently versioned and publishable to npm as `@snapshot/core`, `@snapshot/react`, `@snapshot/electron`.
+One-time: create the [`@snapshot` npm org](https://www.npmjs.com/org/create) and ensure 2FA is configured.
+
+```bash
+pnpm publish:packages --otp=123456   # code from your authenticator app
+```
+
+This publishes `@snapshot/core`, `@snapshot/react`, and `@snapshot/electron@0.1.0` to the public npm registry. Install from any client:
+
+```bash
+pnpm add @snapshot/core @snapshot/react
+```
 
 ## License
 

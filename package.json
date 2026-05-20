@@ -7,7 +7,8 @@
     "typecheck": "pnpm -r --filter './packages/*' run typecheck",
     "clean": "pnpm -r run clean",
     "dev:demo": "pnpm --filter vite-react-demo dev",
-    "build:demo": "pnpm build && pnpm --filter vite-react-demo build"
+    "build:demo": "pnpm build && pnpm --filter vite-react-demo build",
+    "publish:packages": "pnpm build && pnpm typecheck && pnpm publish -r --filter './packages/*' --access public --no-git-checks"
   },
   "devDependencies": {
     "tsup": "^8.4.0",
