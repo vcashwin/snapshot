@@ -1,0 +1,31 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Paper Snapshot — Snapshot any UI into Paper.">
+  <!-- paper-white ground -->
+  <rect width="1600" height="900" fill="#F4F6FA" />
+
+  <!-- brand blue panel -->
+  <rect x="1120" y="0" width="480" height="900" fill="#6E8FE8" />
+
+  <!-- chrome-yellow spark, tilted, straddling the panel edge -->
+  <g transform="rotate(-7 1277 115)">
+    <rect x="1150" y="72" width="254" height="86" fill="#F5DE4E" />
+  </g>
+
+  <!-- logo lockup -->
+  <rect x="64" y="60" width="48" height="48" rx="13" fill="#0B0F1A" />
+  <rect x="80" y="76" width="16" height="16" fill="#6E8FE8" />
+  <text x="128" y="93" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-weight="700" font-size="34" letter-spacing="-0.5" fill="#0B0F1A">Paper Snapshot</text>
+
+  <!-- headline -->
+  <text font-family="'Arial Black', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-weight="900" font-size="100" letter-spacing="-3" fill="#0B0F1A">
+    <tspan x="62" y="448">Snapshot any UI</tspan>
+    <tspan x="62" y="548">into Paper.</tspan>
+  </text>
+
+  <!-- repo footer -->
+  <text x="64" y="838" font-family="'JetBrains Mono', 'SF Mono', ui-monospace, Menlo, Consolas, monospace" font-size="28" letter-spacing="0.5" fill="#52525B">github.com/vcashwin/paper-snapshot</text>
+
+  <!-- OSS mark in panel -->
+  <rect x="1486" y="772" width="26" height="26" fill="#FFFFFF" />
+  <rect x="1512" y="798" width="26" height="26" fill="#0B0F1A" />
+  <text x="1538" y="858" text-anchor="end" font-family="'JetBrains Mono', 'SF Mono', ui-monospace, Menlo, Consolas, monospace" font-size="20" letter-spacing="3" fill="#0B0F1A">OSS</text>
+</svg>

@@ -2,6 +2,8 @@
 
 Tree-shakeable monorepo for capturing live DOM elements as inline-styled HTML — the same engine behind [Paper Snapshot](https://paper.design/snapshot-extension). Paste the result into Paper desktop or any HTML-aware editor.
 
+![Paper Snapshot — Snapshot any UI into Paper](./.github/banner.svg)
+
 ## Packages
 
 | Package | Import | Purpose |
